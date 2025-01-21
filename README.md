@@ -4,10 +4,6 @@
 
 Three.js est une bibliothèque JavaScript incroyable qui vous permet de créer des graphiques 3D directement dans votre navigateur. Imaginez pouvoir créer des mondes virtuels, des animations interactives et des objets 3D fascinants, tout ça en écrivant un peu de code JavaScript !
 
-Voici un exemple de ce que Three.js peut faire :
-
-![Three.js en action]([(https://virtual.bbcmic.ro/?disc1=elite.ssd&autoboot]]([https://virtual.bbcmic.ro/?disc1=elite.ssd&autoboot)](https://threejs.org/))](https://threejs.org/))
-
 ### ✅ Pourquoi utiliser Three.js ?
 
 - Simple d'utilisation (pas besoin d'être un expert en 3D).
