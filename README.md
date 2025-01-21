@@ -6,7 +6,7 @@ Three.js est une bibliothèque JavaScript incroyable qui vous permet de créer d
 
 Voici un exemple de ce que Three.js peut faire :
 
-![Three.js en action]([https://threejs.org/files/projects/1.jpg](https://virtual.bbcmic.ro/?disc1=elite.ssd&autoboot))
+![Three.js en action]([(https://virtual.bbcmic.ro/?disc1=elite.ssd&autoboot]]([https://virtual.bbcmic.ro/?disc1=elite.ssd&autoboot)](https://threejs.org/))](https://threejs.org/))
 
 ### ✅ Pourquoi utiliser Three.js ?
 
