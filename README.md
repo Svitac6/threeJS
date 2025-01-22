@@ -18,7 +18,7 @@ Voici une liste des différents fichiers d'entraînement que vous trouverez dans
 
 - **Description** : Un premier pas amusant dans le monde de Three.js. Créez une scène basique avec un cube qui tourne !
 - **Objectifs** : Comprendre la structure de base d'une scène Three.js (Scène, Caméra, Rendu).
-
+<!-- 
 ### 2. 🚀 [**Avancé**](./advanced)
 
 - **Description** : Ajoutez des lumières, des textures, et commencez à explorer des modèles 3D plus complexes.
@@ -37,7 +37,7 @@ Voici une liste des différents fichiers d'entraînement que vous trouverez dans
 ### 5. 🌈 [**Expérimentations Fun**](./fun)
 
 - **Description** : Une collection de projets ludiques où vous pouvez tester des idées folles.
-- **Objectifs** : Laissez libre cours à votre créativité !
+- **Objectifs** : Laissez libre cours à votre créativité ! -->
 
 ## Comment commencer ? 🚚
 
