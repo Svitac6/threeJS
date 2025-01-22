@@ -1,8 +1,12 @@
+// Importation de la bibliothèque principale Three.js
 import * as THREE from 'three';
+
+// Importation du module OrbitControls pour permettre le contrôle de la caméra via la souris
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 // Initialisation de la scène, de la caméra, et du renderer
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+const camera = new THREE.PerspectiveCamera(100, window.innerWidth / window.innerHeight,0.5, 1000);
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
@@ -51,46 +55,7 @@ camera.position.z = 6;
 function getCubesInSlice(axis, value) {
     return cubes.filter((cube) => Math.abs(cube.position[axis] - value) < 0.01);
 }
-
-// Fonction pour effectuer une rotation sur une tranche
-function rotateSlice(axis, value, angle, duration) {
-    const sliceGroup = new THREE.Group(); // Groupe temporaire pour la tranche
-
-    // Obtenir les cubes de la tranche
-    const sliceCubes = getCubesInSlice(axis, value);
-
-    // Ajouter les cubes de la tranche au groupe temporaire
-    sliceCubes.forEach((cube) => {
-        mainGroup.remove(cube); // Retirer du groupe principal
-        sliceGroup.add(cube); // Ajouter au groupe temporaire
-    });
-
-    // Ajouter le groupe temporaire à la scène
-    scene.add(sliceGroup);
-
-    // Animation de la rotation
-    const startTime = performance.now();
-
-    function animateRotation() {
-        const elapsed = performance.now() - startTime;
-        const t = Math.min(elapsed / duration, 1); // Normaliser le temps entre 0 et 1
-
-        sliceGroup.rotation[axis] = t * angle; // Appliquer une rotation proportionnelle au temps
-
-        if (t < 1) {
-            requestAnimationFrame(animateRotation); // Continuer l'animation
-        } else {
-            // Une fois la rotation terminée, réintégrer les cubes dans le groupe principal
-            sliceCubes.forEach((cube) => {
-                sliceGroup.remove(cube); // Retirer du groupe temporaire
-                mainGroup.add(cube); // Réintégrer dans le groupe principal
-            });
-            scene.remove(sliceGroup); // Supprimer le groupe temporaire
-        }
-    }
-
-    animateRotation(); // Lancer l'animation
-}
+const controls = new OrbitControls(camera, renderer.domElement);
 
 // Variables pour les rotations automatiques
 let lastRotationTime = 0;
@@ -116,8 +81,9 @@ function animate() {
         const angle = Math.PI / 2; // Angle de 90 degrés
         const duration = 1000; // Durée de l'animation (en millisecondes)
 
-        rotateSlice(axis, value, angle, duration);
+        //rotateSlice(axis, value, angle, duration);
     }
+    controls.update();
 
     renderer.render(scene, camera); // Rendu de la scène
 }
