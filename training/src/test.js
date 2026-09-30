@@ -77,6 +77,8 @@ function animate() {
 
   // Rendu de la scène à partir de la caméra
   renderer.render(scene, camera);
+
+  
 }
 
 // Appel initial de la fonction d'animation
